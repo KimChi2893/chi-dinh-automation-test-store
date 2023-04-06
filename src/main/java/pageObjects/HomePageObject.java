@@ -16,8 +16,8 @@ public class HomePageObject extends BasePage {
     }
 
     public void hoverToApparelAndAccessoriesMenu() {
-        sleepInSecond(1);
-        waitForElementVisible(driver, HomePageUI.APPAREL_AND_ACCESSORIES_MENU);
+        //sleepInSecond(2);
+        //waitForElementVisible(driver, HomePageUI.APPAREL_AND_ACCESSORIES_MENU);
         hoverMouseToElement(driver, HomePageUI.APPAREL_AND_ACCESSORIES_MENU);
     }
 
@@ -37,11 +37,4 @@ public class HomePageObject extends BasePage {
         return PageGeneratorManager.getTShirtsPageObject(driver);
     }
 
-    public void sleepInSecond(long second) {
-        try {
-            Thread.sleep(second*1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
 }
