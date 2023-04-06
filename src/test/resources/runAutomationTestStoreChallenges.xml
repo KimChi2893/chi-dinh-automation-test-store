@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Automation Test Store">
+    <listeners>
+  	<listener class-name="commons.MethodListener"/>
+  	<listener class-name="reportConfig.ExtentTestListener"/>
+    </listeners>
+    <parameter name="url" value="https://automationteststore.com/" />
+
+    <test name="Run on CHROME browser">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="Automation_Test_Store_Challenges"/>
+        </classes>
+    </test>
+
+    <test name="Run on FIREFOX browser">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="Automation_Test_Store_Challenges"/>
+        </classes>
+    </test>
+
+</suite>
